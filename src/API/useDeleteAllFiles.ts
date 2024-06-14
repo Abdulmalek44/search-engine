@@ -9,7 +9,7 @@ const DeleteAllFiles = () => {
     const config = {
         method: 'delete',
         maxBodyLength: Infinity,
-        url: 'http://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival',
+        url: 'https://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival',
         headers: {
             'accept': 'application/json',
             'Content-Type': 'application/json',

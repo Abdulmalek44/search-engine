@@ -7,7 +7,7 @@ const fetchFileDetails = async (id: string | null) => {
     const config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `http://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/${id}`,
+        url: `https://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/${id}`,
         headers: {
             'accept': 'application/json',
             'Authorization': `Basic ${import.meta.env.VITE_API_AUTH_TOKEN}`,

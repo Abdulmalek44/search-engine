@@ -10,7 +10,7 @@ const uploadFiles = async (files: File[]) => {
     const config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'http://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/upload-documents',
+        url: 'https://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/upload-documents',
         headers: {
             'accept': 'application/json',
             'Content-Type': 'multipart/form-data',

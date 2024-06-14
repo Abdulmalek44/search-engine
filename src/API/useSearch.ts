@@ -11,7 +11,7 @@ const search = async (data: TData) => {
   const config = {
     method: "post",
     maxBodyLength: Infinity,
-    url: "http://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/search",
+    url: "https://wordsearchalgo-001-site1.atempurl.com/api/v1/informationretrival/search",
     headers: {
       accept: "application/json",
       "Content-Type": "application/json",

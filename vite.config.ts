@@ -13,7 +13,7 @@ export default defineConfig({
   // server: {
   //   proxy: {
   //     '/api': {
-  //       target: 'http://wordsearchalgo-001-site1.atempurl.com',
+  //       target: 'https://wordsearchalgo-001-site1.atempurl.com',
   //       changeOrigin: true,
   //       rewrite: (path) => path.replace(/^\/api/, '/api'),
   //     },
