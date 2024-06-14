@@ -10,6 +10,7 @@ const CreatedBy = () => {
           name={card.name}
           nameWithId={card.nameWithId}
           classStudent={card.class}
+          linkedin={card.linkedin}
         />
       ))}
     </div>

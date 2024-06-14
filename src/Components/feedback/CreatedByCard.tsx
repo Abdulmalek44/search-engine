@@ -1,22 +1,23 @@
+import Person from "@/assets/svg/person-abd.svg?react";
+
 type CreatedByCardProps = {
   name: string;
   nameWithId: string;
   classStudent: string;
+  linkedin: string;
 };
 
 const CreatedByCard = ({
   classStudent,
   name,
   nameWithId,
+  linkedin,
 }: CreatedByCardProps) => {
   return (
     <div className="w-96  dark:bg-slate-800 gap-6 flex items-center justify-center">
       <div className="bg-gray-100 w-11/12 h-48 dark:bg-gray-700 relative shadow-xl overflow-hidden hover:shadow-2xl group rounded-xl p-5 transition-all duration-500 transform">
         <div className="flex items-center gap-4">
-          <img
-            src="https://picsum.photos/200/200?grayscale"
-            className="w-32 group-hover:w-36 group-hover:h-36 h-32 object-center object-cover rounded-full transition-all duration-500 delay-500 transform"
-          />
+          <Person className="w-32 group-hover:w-36 group-hover:h-36 h-32 object-center object-cover rounded-full transition-all duration-500 delay-500 transform bg-gray-800 " />
           <div className="w-fit transition-all transform duration-500">
             <h1 className="text-gray-600 dark:text-gray-200 font-bold">
               {name}
@@ -43,14 +44,16 @@ const CreatedByCard = ({
             >
               <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
             </svg>
-            <svg
-              viewBox="0 0 960 1000"
-              fill="currentColor"
-              height="1em"
-              width="1em"
-            >
-              <path d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98" />
-            </svg>
+            <a href={linkedin} target="_blank">
+              <svg
+                viewBox="0 0 960 1000"
+                fill="currentColor"
+                height="1em"
+                width="1em"
+              >
+                <path d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

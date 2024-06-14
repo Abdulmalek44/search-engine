@@ -10,15 +10,15 @@ export default defineConfig({
   define: {
     'process.env': process.env
   },
-  // server: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'https://wordsearchalgo-001-site1.atempurl.com',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, '/api'),
-  //     },
-  //   },
-  // },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://wordsearchalgo-001-site1.atempurl.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

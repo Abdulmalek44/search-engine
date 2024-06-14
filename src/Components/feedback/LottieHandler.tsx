@@ -5,6 +5,7 @@ import SearchPaper from "@/assets/lotties/search-paper.json";
 import Loading from "@/assets/lotties/loading.json";
 import UploadFile from "@/assets/lotties/uploadFile.json";
 import SearchFailed from "@/assets/lotties/search-failed.json";
+import searchDetails from "@/assets/lotties/search-2.json";
 
 const Lottihandlermap = {
   error: error,
@@ -13,6 +14,7 @@ const Lottihandlermap = {
   Loading: Loading,
   UploadFile: UploadFile,
   SearchFailed: SearchFailed,
+  searchDetails: searchDetails,
 };
 
 type LottieHandlerprops = {

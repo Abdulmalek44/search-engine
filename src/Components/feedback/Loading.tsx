@@ -5,10 +5,17 @@ type LoadingProps = {
   isLoading: boolean;
   isError: boolean;
   isUpload?: boolean;
+  isSearchDetails?: boolean;
   children: ReactNode;
 };
 
-const Loading = ({ isLoading, children, isError, isUpload }: LoadingProps) => {
+const Loading = ({
+  isLoading,
+  children,
+  isError,
+  isUpload,
+  isSearchDetails,
+}: LoadingProps) => {
   if (isLoading) {
     if (isUpload) {
       return (
@@ -18,6 +25,9 @@ const Loading = ({ isLoading, children, isError, isUpload }: LoadingProps) => {
           Style="w-1/4"
         />
       );
+    }
+    if (isSearchDetails) {
+      return <LottieHandler type="searchDetails" Style="w-3/4" />;
     }
     return <LottieHandler type="Loading" />;
   }

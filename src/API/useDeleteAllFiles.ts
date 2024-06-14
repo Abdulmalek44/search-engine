@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 
-const DeleteAllFiles = () => {
+const DeleteAllFiles = async () => {
     const data = JSON.stringify({
         "deleteAll": true
     });
@@ -18,7 +18,12 @@ const DeleteAllFiles = () => {
         data: data
     };
 
-    return axios.request(config).then(response => response.data);
+    try {
+        const response = await axios.request(config)
+        return response.data
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 const useDeleteAllFiles = () => {

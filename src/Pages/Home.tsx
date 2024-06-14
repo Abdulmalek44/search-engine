@@ -52,7 +52,7 @@ const Home = () => {
           </div>
         </Loading>
         {Array.isArray(data) && data.length === 0 && (
-          <div className="mt-20 flex flex-col items-center">
+          <div className="my-20 flex flex-col items-center">
             <LottieHandler
               type="SearchFailed"
               message="There is no files on the server"
@@ -63,7 +63,9 @@ const Home = () => {
             </NavLink>
           </div>
         )}
-        <DataDetails Filesdata={data} />
+        {Array.isArray(data) && data.length > 0 && (
+          <DataDetails Filesdata={data} />
+        )}
       </div>
     </div>
   );
